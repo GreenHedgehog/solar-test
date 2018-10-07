@@ -103,9 +103,9 @@ Deletes vacancy with id
 **Example Responce**:
 ##### **code** : `204 No Content`
 
-### **Delete vacancy**
+### **Add vacancy**
 
-Deletes vacancy with id
+Creates new vacancy with given info
 
 **URL** : `/vacancy`
 
