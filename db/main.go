@@ -21,15 +21,6 @@ func (c *Config) String() string {
 	return fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", c.Host, c.Port, c.User, c.Pass, c.Name)
 }
 
-// Vacancy stores info about vacancy
-type Vacancy struct {
-	ID         int    `json:"id,omitempty"`
-	Name       string `json:"name"`
-	Salary     int    `json:"salary"`
-	Experience string `json:"experience"`
-	Place      string `json:"place"`
-}
-
 var db *sql.DB
 
 // Init inits new connection pool

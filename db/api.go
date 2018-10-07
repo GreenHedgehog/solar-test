@@ -1,5 +1,7 @@
 package db
 
+import "github.com/GreenHedgehog/solar-test/models"
+
 func executor(query string, args ...interface{}) error {
 	stmt, err := db.Prepare(query)
 	if err != nil {
@@ -12,7 +14,7 @@ func executor(query string, args ...interface{}) error {
 }
 
 // Add writes new vacancy to db
-func Add(v *Vacancy) error {
+func Add(v *models.Vacancy) error {
 	stmt, err := db.Prepare(qAdd)
 	if err != nil {
 		return err
@@ -28,7 +30,7 @@ func Delete(id int) error {
 }
 
 // Get returns info for vacancy with given id
-func Get(id int) (v Vacancy, err error) {
+func Get(id int) (v models.Vacancy, err error) {
 	err = db.QueryRow(qGet, id).Scan(&v.ID, &v.Name, &v.Salary, &v.Experience, &v.Place)
 	return
 }
