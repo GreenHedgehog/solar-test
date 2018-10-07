@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "78.153.142.202",
+    "port": 4444,
+    "user": "solar_user",
+    "pass": "solar_pass",
+    "name": "solar_db"
+  },
+  "server": {
+    "port": 8080
+  }
+}
